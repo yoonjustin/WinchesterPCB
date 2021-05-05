@@ -13,11 +13,21 @@ The teensy 4.1 uses 100mA, the oled screen 20mA, THS7376 30mA, FE1.1s 142mA, BA7
 
 I also made sure not to connect the +5v directly to the pins on the usb ports. The MIC2026-2YM will provide the usb ports with power according to the usb specifications. If anything goes out of spec, the MIC2026 will tell the FE1.1s usb hub to turn off the ports. This should help protect the board and the connected device, incase something goes wrong. 
 
-Both the front and back planes of the pcb are filled with ground. I also added vias along the outside for ground stitching. I dont think its that applicable for this project, but it doesnt hurt anything either. 
-
 ### Component Video
 Jamma arcade games were designed with outputting the video signal to an RGBS compatible display. And when it comes to home compatible tvs, component video is the closest to that signal. Composite video is a more common analog video input, but arcade games wont benefit from any kind of dithering effects.
 
 The RGB signals are passed through individual potentimeters and sent to the BA7230LS to be converted to component signals. Those are then sent to a THS7376 video amplifier and connected to the sync signal which is cleaned up with an LM1881.
 
 The THS7376 video amplifier is a drop in replacement for the THS7374. Either chip is supported in this design. Its worth noting that the 7374 uses much less power than the 7376, but Im not sure how the video quality is between the two. Im not sure if its my crt tv or my eyes, but I dont seem much different enabling and disabling the lowpass filter on the 7376.
+
+### Teensy 4.1
+The teensy 3.6 should also work for this design, but considering the 4.1 model is cheaper and faster, I dont see the point in using 3.6 unless you have one on hand. Due to the fact that the teensy 4.1 is not 5v tolerant, I have the pins connected to biased BJT transistors to connect the jamma pins to ground to signal a button press. The transistors have 1k resistors built in connecting the teensy io pin to the base and between the base and the emitter. 
+
+### PCB
+There are in pad vias in this design. If assembling by hand its not a problem, but some machines do have problems with placing the correct amount of solder the pads with vias.
+
+Both the front and back planes of the pcb are filled with ground. I also added vias along the outside for ground stitching. I dont think its that applicable for this project, but it doesnt hurt anything either. 
+
+All of the connectors, power switch, power led, oled display and potentiometers are using through hole designs incase someone wants to put the board inside of a case. Wires could be ran to connectors on the side of a case. 
+
+The expansion pins are using a footprint of a flat flex connector(SLW8R-5C7LF). A pcb could be mounted on top of the right side, there is another mounting hole near the LM1881 IC. 
