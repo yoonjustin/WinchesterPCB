@@ -23,7 +23,7 @@ The THS7376 video amplifier is a drop in replacement for the THS7374. Either chi
 ### Teensy 4.1
 The teensy 3.6 should also work for this design, but considering the 4.1 model is cheaper and faster, I dont see the point in using 3.6 unless you have one on hand. Due to the fact that the teensy 4.1 is not 5v tolerant, I have the pins connected to biased BJT transistors to connect the jamma pins to ground to signal a button press. The transistors have 1k resistors built in connecting the teensy io pin to the base and between the base and the emitter. One small design flaw is that the Player 1 Up signal is using pin 13 on the teensy, which is connected to an led. So every time player presses the up button the led lights up. I was hoping there would be a way to disable the led, but it is hard wired to the pin.
 
-Do be careful not to have the atx power and have the teensy plugged in with the onboard micro usb port. If you do want to have both plugged in and powered at the same time use this guide to do it safely https://www.pjrc.com/teensy/external_power.html. 
+Be careful not to have the atx power and have the teensy plugged in with the onboard micro usb port at the same time. If you do want to have both plugged in and powered at the same time use this guide to do it safely https://www.pjrc.com/teensy/external_power.html. 
 
 ### PCB
 There are in pad vias in this design. If assembling by hand its not a problem, but some machines do have problems with placing the correct amount of solder the pads with vias.
