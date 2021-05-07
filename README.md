@@ -33,3 +33,8 @@ Both the front and back planes of the pcb are filled with ground. I also added v
 All of the connectors, power switch, power led, oled display and potentiometers are using through hole designs incase someone wants to put the board inside of a case. Wires could be ran to connectors on the side of a case. 
 
 The expansion pins are using a footprint of a flat flex connector(SLW8R-5C7LF). A pcb could be mounted on top of the right side, there is another mounting hole near the LM1881 IC. 
+
+### Future Design Considerations
+The BA7230LS and FE1.1s are easy to use but not so easy to order and aquire. I have actually gotten some bad BA7230LS's from ebay and it would be nice to use a usb hub with better documentation for robust designs. I wish it had separate OVJ and enable lines for each port. This design from GGLABs converts rgb signals using OPAMPs and it might replace using the BA7230LS https://gglabs.us/sites/gglabs.us/files/a520hd_sch-A00.pdf. As for the usb hub, TI makes a wide variety of hubs but none are using the nice TSSOP package.
+
+
