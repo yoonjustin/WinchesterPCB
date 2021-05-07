@@ -41,6 +41,7 @@ There is an issue with PS3 controllers locking up the usbhub when connecting, th
 
 ### Disclaimer
 I did include the MIT license to this project, but to I would like to also state:
-  I offer NO WARRANTY of any kind and assume NO RESPONSIBILITY for any potential damage caused by this device.
-  You are free to build, use, sell, distribute as you like. Please credit and link this project if you are promoting this design
+
+* I offer NO WARRANTY of any kind and assume NO RESPONSIBILITY for any potential damage caused by this device.
+* You are free to build, use, sell, distribute as you like. Please credit and link this project if you are promoting this design
   
