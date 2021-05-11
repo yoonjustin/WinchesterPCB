@@ -37,7 +37,7 @@ The expansion pins are using a footprint of a flat flex connector(SLW8R-5C7LF). 
 ### Future Design Considerations
 The BA7230LS and FE1.1s are easy to use but not so easy to order and aquire. I have actually gotten some bad BA7230LS's from ebay and it would be nice to use a usb hub with better documentation for robust designs. I wish it had separate OVJ and enable lines for each port. This design from GGLABs converts rgb signals using OPAMPs and it might replace using the BA7230LS https://gglabs.us/sites/gglabs.us/files/a520hd_sch-A00.pdf. As for the usb hub, TI makes a wide variety of hubs but none are using the nice SSOP package.
 
-There is an issue with PS3 controllers locking up the usbhub when connecting, that happens intermittantly. Its puzzling since ps4 and xbox one controllers do not exhibit this behavior. Retrocution sells a usb hub that also uses the FE1.1s and warns not to use pinheaders when connecting usb ports. I wonder if its a connection issue somehow. Either way, using a more modern usb hub from TI would be on the table for a board redesign. 
+There is an issue with PS3 controllers locking up the usbhub when connecting, that happens intermittantly. Its puzzling since ps4 and xbox one controllers do not exhibit this behavior. Retrocution sells a usb hub that also uses the FE1.1s and warns not to use pinheaders when connecting usb ports. I wonder if its a connection issue somehow. I also have an issue with using a Hori RAP N model fight stick. It connects for about a second and then disconnects. Either way, using a more modern usb hub from TI would be on the table for a board redesign. 
 
 ### Disclaimer
 I did include the MIT license to this project, but to I would like to also state:
